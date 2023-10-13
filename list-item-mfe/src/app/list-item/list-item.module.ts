@@ -2,6 +2,7 @@ import { Injector, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListItemComponent } from './list-item.component';
 import {createCustomElement} from '@angular/elements';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -9,8 +10,9 @@ import {createCustomElement} from '@angular/elements';
     ListItemComponent
   ],
   imports: [
-    CommonModule
-  ]
+    BrowserModule
+  ],
+  exports: [ListItemComponent]
 })
 export class ListItemModule {
   

@@ -5,7 +5,8 @@
     "types": []
   },
   "files": [
-    "src/main.ts"
+    "src/main.ts",
+    "src/bootstrap-exported.ts"
   ],
   "include": [
     "src/**/*.d.ts"
