@@ -16,4 +16,13 @@ export class MfeManagementService {
       remoteName: 'listItemMfe'
     });
   }
+  async loadReactMfe() {
+    return await loadRemoteModule({
+      type: 'script',
+      remoteEntry: 'http://localhost:4204/remoteEntry.js',
+      exposedModule: './web-components',
+      remoteName: 'react'
+    });
+  }
+
 }

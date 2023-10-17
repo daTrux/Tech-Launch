@@ -11,8 +11,13 @@ const routes: Routes = [
   },
   {
     path: 'city',
-    
-    loadChildren: () => import('cityPage/Module').then(m => m.CityInfoModule)
+    loadChildren: () => 
+    loadRemoteModule({
+      type: 'manifest',
+      remoteName: 'cityPage',
+      exposedModule: './Module'
+    })
+    .then(m => m.CityInfoModule)
   },
   {
     path: '**',

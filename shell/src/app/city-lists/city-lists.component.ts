@@ -17,6 +17,8 @@ import { Router } from '@angular/router';
 export class CityListsComponent implements OnInit, OnDestroy {
   @ViewChild('list', { read: ElementRef, static: true })
   list: ElementRef | undefined;
+  @ViewChild('react', { read: ElementRef, static: true })
+  react: ElementRef | undefined;
   locationList = ['Here', 'There', 'Anywhere'];
   eventManager = new Event('ListItemClickEvent');
 
@@ -38,9 +40,14 @@ export class CityListsComponent implements OnInit, OnDestroy {
         this.list?.nativeElement.appendChild(el1);
       });
     });
+    this.mfeManagementService.loadReactMfe().then(() => {
+      const el1 = document.createElement('react-element');
+      this.react?.nativeElement.appendChild(el1);
+    });
     this.eventManager.subscribe(this.listItemClickHandler);
   }
-  listItemClickHandler = (id: string) => {
-    this.router.navigateByUrl('/city')
+  listItemClickHandler = (name: string) => {
+    this.router.navigate(['/city', name ]);
+    
   };
 }

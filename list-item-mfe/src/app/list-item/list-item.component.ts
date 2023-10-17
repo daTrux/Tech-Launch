@@ -19,6 +19,6 @@ export class ListItemComponent implements OnInit {
     }
 
     onCardClick() {
-     this.eventManager.publish(this.id)
+     this.eventManager.publish(this.locationName)
     }
 }
