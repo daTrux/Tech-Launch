@@ -27,6 +27,9 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
+      remotes: {
+        "cityPage": "http://localhost:4202/remoteEntry.js",
+      },
       // For remotes (please adjust)
       // name: "shell",
       // filename: "remoteEntry.js",

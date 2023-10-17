@@ -23,8 +23,8 @@ export class ListItemModule {
     const ce = createCustomElement(ListItemComponent, {injector: this.injector});
 
     // Specify your custom element unique name
-    if (!customElements.get('first-button')) {
-      customElements.define('first-button', ce);
+    if (!customElements.get('list-item')) {
+      customElements.define('list-item', ce);
     }
   }
 }

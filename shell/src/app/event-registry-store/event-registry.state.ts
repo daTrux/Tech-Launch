@@ -9,7 +9,7 @@ export interface EventRegistryStateModel {
 }
 
 @State<EventRegistryStateModel>({
-  name: 'event-registry',
+  name: 'eventRegistry',
   defaults: {}
 })
 @Injectable()
