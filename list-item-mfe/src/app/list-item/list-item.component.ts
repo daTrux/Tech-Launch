@@ -1,10 +1,11 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable as Event } from 'windowed-observable';
 
 @Component({
   selector: 'app-list-item',
   templateUrl: './list-item.component.html',
-  styleUrls: ['./list-item.component.scss']
+  styleUrls: ['./list-item.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class ListItemComponent implements OnInit {
   eventManager = new Event('ListItemClickEvent');

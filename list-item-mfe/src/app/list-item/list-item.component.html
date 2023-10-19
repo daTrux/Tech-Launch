@@ -1,3 +1,11 @@
-<div (click)="onCardClick()" class="card-item">
-    {{locationName}} - id: {{id}}
+
+
+<div class="card">
+	
+	<div class="card-desc" >
+		<h2>{{locationName}}</h2>
+	</div>
+	<div class="card-actions">
+		<button type='button' class='card-action-readMore' (click)="onCardClick()">Go</button>
+	</div>
 </div>

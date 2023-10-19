@@ -1,4 +1,12 @@
 .list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.react-btn-container {
+    width: fit-content;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
 }

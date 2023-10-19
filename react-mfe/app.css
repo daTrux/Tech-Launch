@@ -1,0 +1,18 @@
+button {
+    margin: 1em 0 1em 1em;
+    height: 3em;
+    width: 8em;
+    background: #c7ff1d;
+    cursor: pointer;
+    border: none;
+    font-weight: light;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    border-radius: 2px;
+  }
+ button:hover {
+    background: rgba(255, 29, 142, 0.8);
+    transition: all 0.1s ease-in;
+  }
