@@ -4,6 +4,7 @@
 	
 	<div class="card-desc" >
 		<h2>{{locationName}}</h2>
+		<h3 *ngIf="currentWeather$ | async as temp">There are {{temp}}°</h3>
 	</div>
 	<div class="card-actions">
 		<button type='button' class='card-action-readMore' (click)="onCardClick()">Go</button>

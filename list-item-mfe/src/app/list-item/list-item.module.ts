@@ -1,16 +1,16 @@
 import { Injector, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { ListItemComponent } from './list-item.component';
 import {createCustomElement} from '@angular/elements';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
     ListItemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   exports: [ListItemComponent]
 })
